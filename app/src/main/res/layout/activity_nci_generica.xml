@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_nci_generica"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.marconatalini.eurostep.NCI_generica">
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/ic_barcode"
+        android:elevation="0dp" />
+
+    <EditText
+        android:id="@+id/numero_lotto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_scan"
+        android:layout_toStartOf="@+id/btn_scan"
+        android:digits="0123456789_ABCDXYZ "
+        android:ems="10"
+        android:hint="numero_lotto"
+        android:inputType="textNoSuggestions|textCapCharacters"
+        android:textAlignment="textStart" />
+
+    <EditText
+        android:id="@+id/descrizioneNC"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/numero_lotto"
+        android:ems="10"
+        android:hint="Descrizione foto"
+        android:inputType="textMultiLine|textCapSentences" />
+
+    <ImageView
+        android:id="@+id/foto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/descrizioneNC"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:scaleType="centerInside"
+        android:src="@mipmap/ic_camera"
+        android:adjustViewBounds="true"/>
+
+    <Button
+        android:id="@+id/btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:enabled="false"
+        android:text="Allega FOTO" />
+
+
+</RelativeLayout>

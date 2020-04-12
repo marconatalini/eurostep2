@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/Server_response"
+        android:text="Risposta del server"
+        android:textAlignment="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ordini in corso"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:id="@+id/btn_ordini_cnc"
+            android:background="@color/blu_logo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:padding="50dp">
+
+        <ToggleButton
+            android:id="@+id/btn_cnc"
+            android:onClick="btn_click"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/inizio_cnc"
+            android:textOn=""
+            android:background="@drawable/mybtn_lavorazione"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:id="@+id/btn_pulizia"
+            android:onClick="btn_click"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/inizio_pulizia"
+            android:textOn="@string/fine_pulizia"
+            />
+    </LinearLayout>
+
+</LinearLayout>

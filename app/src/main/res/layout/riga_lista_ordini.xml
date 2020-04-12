@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:background="@drawable/riga_ordine_background"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/data_ora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data Ora"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/numero_lotto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/colore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Colore"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/n_cornici"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cornici"
+        android:textAlignment="center"
+        android:visibility="gone" />
+
+
+</LinearLayout>
+

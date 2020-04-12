@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="erroreIN">
+        <!-- Descrizione
+        Elenco reparti di rilievo problema
+        -->
+        <item>PRELIEVO</item>
+        <item>TAGLIO</item>
+        <item>LAVORAZIONI</item>
+        <item>GUARNIZIONI</item>
+        <item>IMBALLO</item>
+        <item>VERNICIATURA</item>
+        <item>CONTROLLI</item>
+    </string-array>
+</resources>

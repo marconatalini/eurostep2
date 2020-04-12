@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_nci_ordini"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.marconatalini.eurostep.NCI_ordini">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/numero_lotto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:digits="0123456789_ABCDXYZ "
+                android:ems="10"
+                android:hint="numero_lotto"
+                android:inputType="textNoSuggestions|textCapCharacters"
+                android:textAlignment="textStart" />
+
+            <Button
+                android:id="@+id/btn_scan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_barcode" />
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/titolo_paragrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Errore rilevato in" />
+
+        <Spinner
+            android:id="@+id/spinner_erroreIN"
+            style="@style/Base.TextAppearance.AppCompat.Large"
+            android:textAlignment="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:spinnerMode="dialog"/>
+
+        <GridLayout
+            android:id="@+id/checkgroup_prelievo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/check_prelievo_profili_errati"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="profili errati" />
+
+            <CheckBox
+                android:id="@+id/check_prelievo_mancanza_barre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="mancanza barre" />
+
+            <CheckBox
+                android:id="@+id/check_prelievo_qualita_estruso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="difetti estruso" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/checkgroup_taglio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/check_taglio_barre_difettose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="barre difettose" />
+
+            <CheckBox
+                android:id="@+id/check_taglio_documenti_insufficienti"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="documenti insufficienti" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/checkgroup_lavorazioni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/check_lavorazioni_errore_taglio"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="errore taglio" />
+
+            <CheckBox
+                android:id="@+id/check_lavorazioni_difetti_qualita"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="difetti qualità" />
+
+            <CheckBox
+                android:id="@+id/check_lavorazioni_errore_sviluppo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="errore sviluppo" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/checkgroup_guarnizioni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/check_guarnizioni_pezzi_mancanti"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="pezzi mancanti" />
+
+            <CheckBox
+                android:id="@+id/check_guarnizioni_difetti_qualita"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="difetti qualità" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/checkgroup_imballo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/check_imballo_pezzi_mancanti"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="pezzi mancanti" />
+
+            <CheckBox
+                android:id="@+id/check_imballo_altro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="altro" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/checkgroup_verniciatura"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_errore_colore"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="errore colore" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_profili_ammaccati"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="profili ammaccati" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_altro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="altro" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_bucciato"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="bucciato" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_graffi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="graffi" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_scarsa_polvere"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="scarsa polvere" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_macchie"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="macchie" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_aloni"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="aloni" />
+
+            <CheckBox
+                android:id="@+id/check_verniciatura_impurita"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="impurità" />
+
+        </GridLayout>
+
+        <GridLayout
+            android:id="@+id/checkgroup_controlli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="3"
+            android:visibility="invisible">
+
+            <CheckBox
+                android:id="@+id/check_controlli_profili_errati"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="profili errati" />
+
+            <CheckBox
+                android:id="@+id/check_controlli_dimensioni_errate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="dimensioni errate" />
+
+            <CheckBox
+                android:id="@+id/check_controlli_altro"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:text="altro" />
+
+        </GridLayout>
+
+        <TextView
+            style="@style/titolo_paragrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Note" />
+
+        <EditText
+            android:id="@+id/nciv_note"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textCapSentences|textMultiLine" />
+
+        <TextView
+            style="@style/titolo_paragrafo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Soluzione" />
+
+        <EditText
+            android:id="@+id/nciv_soluzione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textCapSentences|textMultiLine" />
+
+        <Button
+            android:id="@+id/btn_data_soluzione"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DATA soluzione" />
+
+        <RadioGroup
+            android:id="@+id/nciv_stato"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/ncio_chiusa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="chiusa" />
+
+            <RadioButton
+                android:id="@+id/ncio_aperta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="aperta" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:enabled="false"
+            android:text="Invia NC ordine" />
+
+    </LinearLayout>
+
+</ScrollView>

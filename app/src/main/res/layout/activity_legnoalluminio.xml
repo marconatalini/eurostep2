@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/Server_response"
+    android:text="Risposta del server"
+    android:textAlignment="center"/>
+
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:id="@+id/btn_taglio"
+            android:onClick="btn_click"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textOn=""
+            android:textOff="@string/inizio_taglio"
+            android:checked="false"
+            android:background="@drawable/mybtn_lavorazione"/>
+
+    <ToggleButton
+        android:id="@+id/btn_saldatura"
+        android:onClick="btn_click"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:checked="false"
+        android:textOff="@string/inizio_saldatura"
+        android:textOn=""
+        android:background="@drawable/mybtn_lavorazione"/>
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ToggleButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="New ToggleButton"
+            android:id="@+id/btn_levigatura"
+            android:checked="false"
+            android:background="@drawable/mybtn_lavorazione"
+            android:textOff="@string/inizio_levigatura"
+            android:textOn=""
+            android:layout_weight="1"
+            android:onClick="btn_click" />
+
+        <ToggleButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="New ToggleButton"
+            android:id="@+id/btn_zoccoli"
+            android:checked="false"
+            android:layout_weight="1"
+            android:textOff="@string/inizio_zoccoli"
+            android:textOn=""
+            android:onClick="btn_click"
+            android:background="@drawable/mybtn_lavorazione"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ToggleButton
+            android:id="@+id/btn_montaggio_guarnizioni"
+            android:onClick="btn_click"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/inizio_Mont_guarnizioni"
+            android:textOn=""
+            android:background="@drawable/mybtn_lavorazione" />
+
+        <ToggleButton
+            android:id="@+id/btn_imballo"
+            android:onClick="btn_click"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/inizio_Imballo"
+            android:textOn=""
+            android:background="@drawable/mybtn_lavorazione" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ToggleButton
+            android:id="@+id/btn_pulizia"
+            android:onClick="btn_click"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:checked="false"
+            android:textOff="@string/inizio_pulizia"
+            android:textOn="@string/fine_pulizia"
+            />
+
+    </LinearLayout>
+</LinearLayout>

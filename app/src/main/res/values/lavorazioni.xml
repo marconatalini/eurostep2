@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="Lavorazioni">
+        <!-- Descrizione (codice tipo)
+        tipo 0 = inizio/fine lavorazione senza ordine
+        tipo 1 = inizio/fine
+        tipo 2 = selezione ordini multipli (cianfrinato)
+        tipo I = inizio lavorazione non temporizzata
+        tipo F = fine lavorazione non temporizzata
+        -->
+        <item>Taglio materiale (A1 1)</item>
+        <item>Lamiere (A2 1)</item>
+        <item>Lavorazioni CNC (C1 1)</item>
+        <item>Puntatura (S1 1)</item>
+        <item>Saldatura (S2 1)</item>
+        <item>Fresatura (S3 1)</item>
+        <item>Levigatura (S4 1)</item>
+        <item>Zoccoli/Traversi (S5 1)</item>
+        <item>Levigatura Finale (S6 1)</item>
+        <item>Entrata rep.verniciatura (V1 I)</item>
+        <item>Uscita rep.verniciatura (V1 F)</item>
+        <item>Entrata forno (V2 I)</item>
+        <item>Uscita forno (V2 F)</item>
+        <item>Cianfrinatura (C2 2)</item>
+        <item>Montaggio guarnizioni (G1 1)</item>
+        <item>Imballaggio (I1 1)</item>
+        <item>Pulizia reparto (P1 0)</item>
+    </string-array>
+</resources>

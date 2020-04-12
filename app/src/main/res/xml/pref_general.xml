@@ -1,0 +1,59 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/pref_header_general">
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_server_ip"
+            android:inputType= "textCapWords"
+            android:key="server_ip"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_display_name" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_port"
+            android:inputType= "number"
+            android:key="server_port"
+            android:title="@string/pref_title_port_name" />
+
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_webserver_ip"
+            android:inputType= "textCapWords"
+            android:key="webserver_ip"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_webserver_name" />
+
+        <CheckBoxPreference
+            android:key="use_volley"
+            android:title="@string/use_volley"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/pref_header_utente">
+        <EditTextPreference
+            android:capitalize="words"
+            android:defaultValue="@string/pref_default_operator"
+            android:inputType= "textCapWords"
+            android:key="codice_operatore"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:title="@string/pref_title_operator_name" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/pref_header_update">
+            <Preference android:title="Clicca per scaricare l'ultima versione" >
+                <intent android:action="android.intent.action.VIEW"
+                    android:data="http://192.168.29.100/eurostep/app.apk" />
+            </Preference>
+        </PreferenceCategory>
+
+</PreferenceScreen>

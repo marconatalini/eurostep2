@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style  name="AppTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!--"Base.V22.Theme.AppCompat.Light"-->
+
+        <!-- Customize your theme here. -->
+
+    </style>
+
+    <style name="Campo_Dett_ordineLA">
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large.Inverse</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@color/blu_logo</item>
+    </style>
+
+    <style name="titolo_paragrafo" parent="Campo_Dett_ordineLA">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small.Inverse</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+</resources>

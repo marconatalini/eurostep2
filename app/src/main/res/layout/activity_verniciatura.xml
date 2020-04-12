@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:id="@+id/Server_response"
+    android:text="Risposta del server"
+    android:textAlignment="center"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lista merce in arrivo"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            android:id="@+id/btn_in_arrivo_verniciatura"
+            android:background="@color/blu_logo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:paddingTop="20dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Entrata"
+            android:id="@+id/btn_entrata_verniciatura"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn_lavorazione"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Appeso"
+            android:id="@+id/btn_appeso_verniciatura"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn_lavorazione"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Sganciato"
+            android:id="@+id/btn_sganciato_verniciatura"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn_lavorazione"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Uscita"
+            android:id="@+id/btn_uscita_verniciatura"
+            android:layout_weight="1"
+            android:background="@drawable/mybtn_lavorazione"/>
+
+    </LinearLayout>
+
+</LinearLayout>

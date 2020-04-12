@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:title="Mostra finitura"
+        android:key="show_finitura" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:title="Mostra cornici"
+        android:key="show_cornici" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:title="Mostra spezzoni"
+        android:key="show_spezzoni" />
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:title="Mostra data/ora"
+        android:key="show_datetime" />
+
+</PreferenceScreen>
